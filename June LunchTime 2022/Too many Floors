@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+#define ll long long
+
+using namespace std;
+void solution(){
+    int p,q;
+    cin>>p>>q;
+    int k,l;
+    if(p%10==0)k=p/10;
+    else k=(p/10)+1;
+    if(q%10==0)l=q/10;
+    else l=(q/10)+1;
+    cout<<abs(k-l)<<endl;
+    
+}
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        solution();
+    }
+
+    return 0;
+}
