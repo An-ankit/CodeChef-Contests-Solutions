@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+#define ll long long
+
+using namespace std;
+void solution(){
+    int x,n;
+    cin>>x>>n;
+    cout<<(x/10)*n<<endl;
+    
+}
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        solution();
+    }
+
+    return 0;
+}
