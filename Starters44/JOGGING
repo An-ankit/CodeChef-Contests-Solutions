@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+#define ll long long
+
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    const int M = 1000000007;
+    vector<ll> v(1e6+10);
+    v[0]=1;
+    for(int i=1;i<1e6+10;i++){
+        v[i]=(v[i-1]*2)%M;
+    }
+    
+    while(t--){
+        int n,x;
+        cin>>n>>x;
+        //unsigned long long c = 1;
+        
+    
+        //if(n==1)cout<<x<<endl;
+        cout<<((v[n-1])*x)%M<<endl;
+    }
+
+    return 0;
+}
