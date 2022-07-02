@@ -1,1 +1,55 @@
+#include <bits/stdc++.h>
+#define ll long long
 
+using namespace std;
+
+int moves(int x){
+    int c=0;
+    while(x%2==0){
+        x/=2;
+        c++;
+    }
+    return c;
+}
+void solution(){
+    ll n;
+    cin>>n;
+    vector<ll> v(2*n);
+    for(ll i=0;i<2*n;i++){
+        cin>>v[i];
+    }
+    int e=0;
+    int o=0;
+    vector<int> cal;
+    for(int i=0;i<2*n;i++){
+        if(v[i]%2)o++;
+        else{
+            e++;
+            cal.push_back(moves(v[i]));
+        }
+    }
+    sort(cal.begin(),cal.end());
+    int ans=0;
+    if(o>=e)cout<<o-n<<endl;
+    else{
+        for(int i=0;i<e-n;i++){
+            ans+=cal[i];
+        }
+        cout<<ans<<endl;
+    }
+    
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    int t;
+    cin>>t;
+    while(t--){
+        solution();
+    }
+
+    return 0;
+}
