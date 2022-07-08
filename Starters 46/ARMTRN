@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+#define ll long long
+
+using namespace std;
+void solution(){
+    int n;
+    cin>>n;
+    int ts=0,sum=0;
+    vector<int>v(n);
+    for(int i=0;i<n;i++){
+        cin>>v[i];
+        ts+=v[i];
+    }
+    sort(v.begin(),v.end(),greater<int>());
+    ll k=0;
+    for(int i=0;i<n;i++){
+        k=max(k,(ll)sum*((1000*(n-i))-(ts-sum)));
+        sum+=v[i];
+    }
+    cout<<k<<endl;
+    
+    
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    int t;
+    cin>>t;
+    while(t--){
+        solution();
+    }
+
+    return 0;
+}
