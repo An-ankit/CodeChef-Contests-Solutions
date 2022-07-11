@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+#define ll long long
+
+using namespace std;
+void solution(){
+    int a,b,c,d;
+    cin>>a>>b>>c>>d;
+    int m= abs(a-c)+abs(b-d);
+    if((abs(a-c)==1 && b==d) || (abs(b-d)==1 && a==c)){
+        cout<<"no"<<endl;
+        return;
+    }
+    if(m%2==1){
+        cout<<"no"<<endl;
+    }
+    else cout<<"yes"<<endl;
+    
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    int t;
+    cin>>t;
+    while(t--){
+        solution();
+    }
+
+    return 0;
+}
