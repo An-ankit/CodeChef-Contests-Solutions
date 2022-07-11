@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+#define ll long long
+
+using namespace std;
+void solution(){
+    int tc,mn,sn;
+    cin>>tc>>mn>>sn;
+    if(sn%mn==0 && sn/mn>tc){
+        cout<<tc*mn*mn<<endl;
+    }
+    else if(sn%mn==0 && sn/mn<=tc){
+        int k=sn/mn;
+        cout<<k*mn*mn<<endl;
+    }
+    else if(sn/mn +1 >tc){
+        cout<<tc*mn*mn<<endl;
+    }
+    else if(sn/mn +1 <=tc){
+        int k=sn/mn;
+        int r=sn%mn;
+        cout<<(k*mn*mn)+(r*r)<<endl;
+    }
+    
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    int t;
+    cin>>t;
+    while(t--){
+        solution();
+    }
+
+    return 0;
+}
