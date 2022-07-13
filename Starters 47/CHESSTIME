@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+#define ll long long
+#define pb push_back
+
+using namespace std;
+void solution(){
+    int x;
+    cin>>x;
+    cout<<3*x<<endl;
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    
+    int t;
+    cin>>t;
+    while(t--){
+        solution();
+    }
+
+    return 0;
+}
