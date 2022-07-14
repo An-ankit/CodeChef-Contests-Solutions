@@ -1,0 +1,52 @@
+string s;
+
+bool func( int j)
+{   
+    if( j == 0){ return true;} 
+    if( !(j &1) ){ return func( j -1);}
+    
+    bool check = true;
+  ll diff =  (j+1)/2;
+    for( int i = 0; i <=j/2; i++)
+    {
+        if(s[i] != s[i+diff]){ check = false ; break;}
+    } 
+
+    if(!check){return false;}
+    
+    return func( j /2);
+
+
+}
+int main() {
+ 
+#ifndef ONLINE_JUDGE
+freopen("input.txt","r",stdin);
+freopen("output.txt","w",stdout);
+#endif
+ 
+ ios_base::sync_with_stdio(false);
+ 
+cin.tie(NULL);
+
+ 
+int t;
+cin>>t;
+ 
+ while( t--)
+ {
+   
+
+  ll n;
+  cin>>n;
+  
+  cin>>s;
+  bool check = func(n-1);
+
+if(check){cout<<"YES\n";
+}
+else cout<<"NO\n";
+   
+}
+
+}
